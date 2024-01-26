@@ -1,0 +1,10 @@
+version: '3.5'
+
+services:
+  hlsdl-server:
+    image: hlsdl-server:1.0
+    restart: unless-stopped
+    volumes:
+      - "./download:/app/download"
+    ports:
+      - "8080:8080"
